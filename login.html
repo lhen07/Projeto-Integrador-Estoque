@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="src/CSS/login.css">
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Usuário" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+        <p id="loginMessage"></p>
+        <button type="button" onclick="mostrarCadastro()">Criar Conta</button>
+    </form>
+    
+    <form id="registerForm" style="display: none;">
+        <button type="button" class="close-button" onclick="fecharCadastro()">✖</button>
+        <h2>Cadastrar</h2>
+        <input type="text" id="newUsername" placeholder="Novo Usuário" required>
+        <input type="password" id="newPassword" placeholder="Nova Senha" required>
+        <button type="button" onclick="cadastrarUsuario()">Cadastrar</button>
+    </form>
+    
+
+    <script src="src/JS/login.js"></script>
+</body>
+</html>

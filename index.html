@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+
+    <link rel="stylesheet" href="src/CSS/style.css">
+
+</head>
+<body>
+    <div class="navbar">
+        <!-- Barra de navegação -->
+        <a href="index.html">Home</a>
+        <a href="adicionar_produto.html">Adicionar Produto</a>
+        <a href="estoque.html">Controle de Estoque</a>
+
+        <div class="perfil-container">
+            <!-- Botão de perfil com imagem do usuário -->
+            <button class="perfil-btn">
+                <img src="src/Image/perfil.png" alt="Perfil" class="perfil-img"> 
+                <span id="usuarioLogadoNome"></span>
+            </button>
+            <div class="dropdown-menu">
+                <button onclick="logout()">Sair</button>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Barra lateral com opções de controle -->
+    <div class="sidebar">
+        <div>
+            <h3>Controle</h3>
+            <button onclick="window.location.href='adicionar_produto.html'">Adicionar Produto</button>
+            <button onclick="removerProduto()">Remover Produto</button>
+        </div>
+        <div>
+            <h4>Filtrar Produto</h4>
+            <input type="text" id="filtro" placeholder="Buscar..." onkeyup="filtrarProdutos()">
+        </div>
+        <div>
+            <h4>Registrar Venda</h4>
+            <input type="text" id="produtoVenda" placeholder="Referência do Produto">
+            <input type="number" id="quantidadeVenda" placeholder="Quantidade Vendida">
+            <button onclick="venderProduto()">Registrar Venda</button>
+        </div>
+    </div>
+
+    <!-- Área principal de conteúdo -->
+    <div class="content">
+        <h1>Controle de Estoque</h1>
+        <table id="estoque">
+            <thead>
+                <tr>
+                    <th>Referência</th>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Tipo</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="src/JS/index.js"></script>
+    <script src="src/JS/vendas.js"></script>
+    <script src="src/JS/pesquisas.js"></script>
+
+</body>
+</html>

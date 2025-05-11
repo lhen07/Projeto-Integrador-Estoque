@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto</title>
+
+    <link rel="stylesheet" href="src/CSS/addproduto-style.css">
+
+</head>
+<body>
+    <!-- Barra de navegação com links para diferentes páginas -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="adicionar_produto.html">Adicionar Produto</a>
+        <a href="estoque.html">Controle de Estoque</a>
+    </div>
+
+    <h2>Adicionar Produto</h2>
+
+     <!-- Formulário para adicionar novos produtos ao estoque -->
+    <form id="produtoForm">
+        <input type="text" id="referencia" placeholder="Referência" required>
+        <input type="text" id="produto" placeholder="Produto" required>
+        <input type="text" id="descricao" placeholder="Descrição" required>
+        <input type="text" id="tipo" placeholder="Tipo" required>
+        <input type="number" id="quantidade" placeholder="Quantidade" required>
+        <input type="text" id="preco" placeholder="Preço" required>
+        <input type="text" id="status" placeholder="Status" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    
+    <script src="src/JS/produtos.js"></script>
+    
+</body>
+</html>
